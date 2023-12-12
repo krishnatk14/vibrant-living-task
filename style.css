@@ -6,6 +6,7 @@
     text-decoration: none;
     
 }
+
 .roboto-mono{
     font-family: 'Roboto Mono', monospace;
 }
@@ -31,6 +32,7 @@ body{
 }
 header{
     margin: 0 auto;
+    /* position: relative; */
 }
 .borderd{
     border: 1px solid;
@@ -51,8 +53,9 @@ header{
 }
 .header-container{
     /* border: 1px solid; */
-    width: 95%;
-    margin: 1rem auto;
+    padding: 0 50px;
+    margin: 0 auto;
+    max-width: 1280px;
 
 }
 .nav-icons-list{
@@ -61,6 +64,9 @@ header{
 }
 .show-icon{
     display: none;
+}
+.full-nav{
+    font-size: 13px;
 }
 .full-nav-list{
     display: none;
@@ -77,9 +83,7 @@ header{
     font-size: 2.7rem;
     text-align: center;
 }
-.prod-img{
 
-}
 .ratings{
     display: flex;
     /* border: 3px solid; */
@@ -252,6 +256,14 @@ header{
 .ing-svg{
     display: none;
 }
+.ingredient-group{
+    display: flex;
+    gap: 1.3rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 .ingredients-list{
     margin-bottom: 3rem;
     /* padding: 0.5rem; */
@@ -260,8 +272,9 @@ header{
     font-weight: 600;
     display: flex;
     overflow-x: auto;
-    align-items: center;
-    justify-content: space-between;
+    gap: 1.3rem;
+    /* align-items: center; */
+    justify-content: space-around;
     /* border: 1px solid; */
     width: 100%;
 }
@@ -298,17 +311,8 @@ header{
     text-transform: none;
     padding: 1rem;
     align-items:  center;
-    gap: 10px;
+    gap: 20px;
     /* border: 1px solid; */
-}
-.macro-flex{
-    display: flex;
-    /* border: 1px solid; */
-}
-.macro-flex span{
-    color: #f26b25;
-    font-size: 1rem;
-    font-weight: 900;
 }
 .macro-row{
     width: 100%;
@@ -317,6 +321,7 @@ header{
     /* border: 1px solid; */
     padding: 0;
     margin: 0;
+    gap: 10px;
 }
 .macro-row p{
     flex: none;
@@ -352,28 +357,38 @@ header{
 }
 
 @media(min-width:768px){
-    .full-logo{
-        display: inline-block;
+    header{
+       position: sticky;
+       top: 0;
+       /* border: 1px solid; */
     }
     .resp-logo{
         display: none;
     }
     .full-logo{
-        width: 20%;
+        display: inline-block;
+        width: 90%;
         max-width: 150px;
-        position: fixed;
-        top: 0;
-        z-index: 999;
+        /* position: fixed; */
+        /* top: 0; */
+        /* z-index: 999; */
     }
     .ratings{
         justify-content: flex-start;
         align-items: center;
         margin: 1rem 0;
     }
+    .full-nav{
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%); */
+    }
     .full-nav-list{
         display: flex;
         gap: 1.5rem;
-        border: 1px solid;
+        text-transform: uppercase;
+        /* border: 1px solid; */
         padding: 1rem 2rem;
     }
     .header-area{
@@ -451,7 +466,15 @@ header{
 
     .nut-facts{
         display: flex;
+        /* border: 1px solid; */
         justify-content: space-between;
+        gap: 20rem;
+        padding: 0 5rem;
+    }
+    .nutrition{
+        /* border: 1px solid; */
+        flex-grow: 0;
+        width: 32rem;
     }
     .title-txt{
         background-image: none;
@@ -469,6 +492,7 @@ header{
         right: -30%;
         top: 40rem;
     }
+    
 }
 
 
