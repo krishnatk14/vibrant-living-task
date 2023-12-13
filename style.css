@@ -72,6 +72,9 @@ header{
     display: none;
 }
 /* Hero section starts here */
+.hero{
+    position: relative;
+}
 .product-details{
     display: flex;
     flex-direction: column;
@@ -429,20 +432,11 @@ header{
         display: inline-block;
         width: 90%;
         max-width: 150px;
-        /* position: fixed; */
-        /* top: 0; */
-        /* z-index: 999; */
     }
     .ratings{
         justify-content: flex-start;
         align-items: center;
         margin: 1rem 0;
-    }
-    .full-nav{
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%); */
     }
     .full-nav-list{
         display: flex;
@@ -460,6 +454,15 @@ header{
     }
     .show-icon{
         display: block;
+    }
+    .hero{
+        margin: -5rem auto;
+    }
+    .prod-img{
+        position: absolute;
+        top: 20rem;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
     .product-details{
         flex-direction: row;
@@ -558,7 +561,7 @@ header{
         z-index: -1;
         right: -5%;
         top: 40rem;
-        height: 200px;
+        /* height: 200px; */
     }
     
 }
