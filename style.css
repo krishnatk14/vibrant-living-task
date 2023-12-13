@@ -297,50 +297,50 @@ header{
 }
 .know-title-txt{
     /* border: 1px solid; */
-    margin: 7rem auto 9rem auto;
+    margin: 9rem auto 6rem auto;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 800;
     /* min-height: 90px;   */
-    /* position: relative;  */
+     position: relative;
 }
 .k{
     display: inline-block;
-    transform: translate(16px,31px) rotate(-40.5deg);
+    transform: translate(16px,36px) rotate(-40.5deg);
     /* transform: translate(16px,31px) rotate(-33deg); */
 }
 .n{
     display: inline-block;
-    transform: translate(16px,14px) rotate(-33.7deg);
+    transform: translate(16px,12px) rotate(-33.7deg);
     /* transform: translate(18px,14px) rotate(-31deg); */
 }
 .o{
     display: inline-block;
-    transform: translate(17px,1px) rotate(-26.7deg);
+    transform: translate(17px,-6px) rotate(-26.7deg);
     /* transform: translate(13px,-9px) rotate(-32deg); */
 }
 .w{
     display: inline-block;
-    transform: translate(20px,-9px) rotate(-19.1deg);
+    transform: translate(20px,-21px) rotate(-16.1deg);
     /* transform: translate(13px,-23px) rotate(-33deg); */
 }
 .y{
     display: inline-block;
-    transform: translate(37px,-21px) rotate(-8.6deg);
+    transform: translate(37px,-32px) rotate(-8.6deg);
 }
 .o1{
     display: inline-block;
-    transform: translate(36px,-26px) rotate(-1.9deg);
+    transform: translate(38px,-37px) rotate(-1.9deg);
 }
 .u{
     display: inline-block;
-    transform: translate(39px,-27px) rotate(4.8deg);
+    transform: translate(41px,-34px) rotate(4.8deg);
 }
 .r{
     display: inline-block;
-    transform: translate(43px,-24px) rotate(11.4deg);
+    transform: translate(45px,-30px) rotate(11.4deg);
 }
 .f{
     display: inline-block;
@@ -348,15 +348,15 @@ header{
 }
 .o2{
     display: inline-block;
-    transform: translate(58px,-3px) rotate(26.9deg);
+    transform: translate(55px,3px) rotate(26.9deg);
 }
 .o3{
     display: inline-block;
-    transform: translate(58px,12px) rotate(33.8deg);
+    transform: translate(54px,23px) rotate(33.8deg);
 }
 .d{
     display: inline-block;
-    transform: translate(56px,32px) rotate(40.5deg);
+    transform: translate(48px,50px) rotate(40.5deg);
 }
 
 .macro{
