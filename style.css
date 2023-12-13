@@ -52,11 +52,7 @@ header{
     margin: 0 auto;
 }
 .header-container{
-    /* border: 1px solid; */
-    padding: 0 50px;
-    margin: 0 auto;
-    max-width: 1280px;
-
+    margin: 0.5rem 1rem 0 1rem;
 }
 .nav-icons-list{
     display: flex;
@@ -72,9 +68,9 @@ header{
     display: none;
 }
 /* Hero section starts here */
-.hero{
+/* .hero{
     position: relative;
-}
+} */
 .product-details{
     display: flex;
     flex-direction: column;
@@ -241,11 +237,11 @@ header{
     font-size: 2rem;
     text-align: center;
     font-weight: 300;
-    margin-bottom: 1.5rem;  
+    margin-bottom: 3rem;  
 }
 .prod-description1{
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     /* text-align: center; */
     font-weight: 300;
     /* margin-bottom: 1.5rem;   */
@@ -254,7 +250,7 @@ header{
 
 /* Ingredients section starts */
 .ingredients{
-    /* border: 1px solid; */
+    margin: 0 0 0 0;
 }
 .ing-svg{
     display: none;
@@ -304,7 +300,7 @@ header{
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     font-weight: 800;
     /* min-height: 90px;   */
      position: relative;
@@ -415,15 +411,19 @@ header{
     gap: 1.3rem;
     margin: 3rem auto;
 }
-.nut-facts{
-    padding: 0 2rem;
-}
+
 
 @media(min-width:768px){
     header{
        position: sticky;
        top: 0;
        /* border: 1px solid; */
+    }
+    .header-container{
+        /* border: 1px solid; */
+        padding: 0 50px;
+        margin: 0 auto;
+        max-width: 1280px;
     }
     .resp-logo{
         display: none;
@@ -443,7 +443,7 @@ header{
         gap: 1.5rem;
         text-transform: uppercase;
         /* border: 1px solid; */
-        padding: 1rem 2rem;
+        padding: 1rem 0;
     }
     .header-area{
         display: flex;
@@ -460,9 +460,11 @@ header{
     }
     .prod-img{
         position: absolute;
-        top: 20rem;
-        left: 50%;
+        top: 24rem;
+        left: 60%;
         transform: translate(-50%,-50%);
+        width: 30%;
+        max-width: 25rem;
     }
     .product-details{
         flex-direction: row;
@@ -470,10 +472,6 @@ header{
     }
     .product-heading{
         font-size: 3.5rem;
-    }
-    .prod-img{
-        width: 50%;
-        max-width: 25rem;
     }
     .prod-specs{
         order: -1;
@@ -521,6 +519,9 @@ header{
         display: none;
     }
 
+    .ingredients{
+        margin-top: 10rem;
+    }
     .ingredients-list{
         background-color: #F8A271;
         padding: 1rem 0;
@@ -531,13 +532,13 @@ header{
         display: flex;
         /* border: 1px solid; */
         justify-content: space-between;
-        gap: 20rem;
-        padding: 0 5rem;
+        gap: 3rem;
+        /* padding: 0 5rem; */
     }
     .nutrition{
         /* border: 1px solid; */
         flex-grow: 0;
-        width: 32rem;
+        width: 22rem;
     }
     .title-txt{
         background-image: none;
@@ -558,10 +559,25 @@ header{
     .ing-svg{
         display: block;
         position: absolute;
-        z-index: -1;
+        z-index: -999;
         right: -5%;
         top: 40rem;
         /* height: 200px; */
+    }
+    .nut-facts{
+        display: flex;
+        /* border: 1px solid; */
+        justify-content: space-between;
+        gap: 10rem;
+        padding: 0 3rem;
+    }
+    .prod-img{
+        position: absolute;
+        top: 27rem;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width: 35%;
+        max-width: 25rem;
     }
     
 }
