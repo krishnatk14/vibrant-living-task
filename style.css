@@ -272,9 +272,9 @@ header{
     font-weight: 600;
     display: flex;
     overflow-x: auto;
-    gap: 1.3rem;
+    gap: 3.3rem;
     /* align-items: center; */
-    justify-content: space-around;
+    /* justify-content: space-around; */
     /* border: 1px solid; */
     width: 100%;
 }
@@ -295,15 +295,70 @@ header{
     font-weight: 300;
     
 }
-.title-txt{
+.know-title-txt{
     /* border: 1px solid; */
-    margin: 1rem auto;
+    margin: 7rem auto 9rem auto;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     font-size: 2.5rem;
-    
+    font-weight: 800;
+    /* min-height: 90px;   */
+    /* position: relative;  */
 }
+.k{
+    display: inline-block;
+    transform: translate(16px,31px) rotate(-40.5deg);
+    /* transform: translate(16px,31px) rotate(-33deg); */
+}
+.n{
+    display: inline-block;
+    transform: translate(16px,14px) rotate(-33.7deg);
+    /* transform: translate(18px,14px) rotate(-31deg); */
+}
+.o{
+    display: inline-block;
+    transform: translate(17px,1px) rotate(-26.7deg);
+    /* transform: translate(13px,-9px) rotate(-32deg); */
+}
+.w{
+    display: inline-block;
+    transform: translate(20px,-9px) rotate(-19.1deg);
+    /* transform: translate(13px,-23px) rotate(-33deg); */
+}
+.y{
+    display: inline-block;
+    transform: translate(37px,-21px) rotate(-8.6deg);
+}
+.o1{
+    display: inline-block;
+    transform: translate(36px,-26px) rotate(-1.9deg);
+}
+.u{
+    display: inline-block;
+    transform: translate(39px,-27px) rotate(4.8deg);
+}
+.r{
+    display: inline-block;
+    transform: translate(43px,-24px) rotate(11.4deg);
+}
+.f{
+    display: inline-block;
+    transform: translate(59px,-12px) rotate(20.6deg);
+}
+.o2{
+    display: inline-block;
+    transform: translate(58px,-3px) rotate(26.9deg);
+}
+.o3{
+    display: inline-block;
+    transform: translate(58px,12px) rotate(33.8deg);
+}
+.d{
+    display: inline-block;
+    transform: translate(56px,32px) rotate(40.5deg);
+}
+
 .macro{
     display: flex;
     flex-direction: column;
@@ -482,6 +537,9 @@ header{
     .whats-inside{
         margin: 0;
     }
+    .know-title-txt{
+        font-size: 3.5rem;
+    }
 }
 
 @media(min-width:1024px){
@@ -489,8 +547,9 @@ header{
         display: block;
         position: absolute;
         z-index: -1;
-        right: -30%;
+        right: -5%;
         top: 40rem;
+        height: 200px;
     }
     
 }
