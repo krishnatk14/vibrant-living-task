@@ -301,10 +301,15 @@ header{
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     /* min-height: 90px;   */
      position: relative;
+}
+.know-bg-img{
+    position: absolute;
+    width: 100%;
+    top: -5rem;
 }
 .k{
     display: inline-block;
@@ -538,8 +543,12 @@ header{
         margin: 0;
     }
     .know-title-txt{
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
+    .know-bg-img{
+        display: none;
+    }
+
 }
 
 @media(min-width:1024px){
