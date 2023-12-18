@@ -1,306 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vibrant Living</title>
-    <link rel="stylesheet" href="style.css" />
+<html>
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Condensed:wght@400;500;600&family=Roboto+Mono:wght@100;200;300;400;600&family=Roboto:wght@300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="header-container d-flex header-area"> 
-        <div class="logo">
-          <a href="#"
-            ><img src="assets/logo-resp.svg" class="resp-logo" alt="vibrant living logo"
-          /></a>
-          <a href="#"
-            ><img
-              src="assets/Logo-with-Background.svg"
-              class="full-logo"
-              alt="vibrant living logo"
-          /></a>
-        </div>
-        <nav class="full-nav roboto">
-          <ul class="full-nav-list d-flex">
-            <li class="full-nav-items">cafe</li>
-            <li class="full-nav-items">store</li>
-            <li class="full-nav-items">gifting</li>
-            <li class="full-nav-items">recepies</li>
-            <li class="full-nav-items">this is us</li>
-          </ul>
-        </nav>
-        
-        <ul class="nav-icons-list d-flex">
-          <li class="nav-icons">
-            <img src="assets/cart-icon.svg" alt="Cart Icon" />
-          </li>
-          <li class="nav-icons hide-icon">
-            <img src="assets/user-icon.svg" alt="User Icon" />
-          </li>
-          <li class="nav-icons hide-icon">
-            <img src="assets/nav-btn.svg" alt="User Icon" />
-          </li>
-          <li class="nav-icons show-icon">
-            <img src="assets/frame-740.svg" alt="User Icon" />
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Condensed:wght@400;500;600&family=Roboto+Mono:wght@100;200;300;400;600&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "vibrant-background": "#FFD7BF",
+            "primary-color": "#ffc8a8",
+            "secondary-color": "#F8A271",
+            "dots-color": "#f26B25",
+            "subtitle-color": "rgba(53, 40, 23, 0.5)",
+            "subtext-color1": "rgba(53, 40, 23, 1)",
+            "subtext-color2": "rgba(53, 40, 23, 0.5)"
+          },
+        },
+        fontFamily:{
+            "roboto": ['Roboto', 'sans-serif'],
+            "roboto-mono":['Roboto Mono', 'monospace'],
+            "roboto-condensed":['Roboto Condensed', 'sans-serif'],
+            "playfair":['Playfair Display', 'serif'], 
+          },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-vibrant-background">
+
+  
+    <!-- Header section starts here -->
+    <header class="flex items-center justify-between my-4 text-center mx-auto md:m-0 md:px-4 lg:px-8 md:sticky md:top-0 lg:max-w-6xl">
+
+      <!-- Logo for responsive screens -->
+      <img src="assets/logo/logo-resp.svg" alt="Logo" class="md:hidden" />
+      <img src="assets/logo/Logo-with-Background.svg" alt="Logo" class="hidden md:block" />
+      <!-- Logo ends -->
+
+      <ul class="uppercase items-center justify-between gap-6 hidden md:flex">
+        <li><a href="#">cafe</a></li>
+        <li><a href="#">store</a></li>
+        <li><a href="#">gifting</a></li>
+        <li><a href="#">recipes</a></li>
+        <li><a href="#">this is us</a></li>
+      </ul>
+  
+      <div class="flex justify-between md:gap-4"> 
+        <div class="hidden md:block"><a href="#"><img src="assets/nav-icons/cart-icon.svg" alt="" /></a></div>
+        <div class="md:hidden"><a href="#"><img src="assets/nav-icons/cart-icon2.svg" alt="" /></a></div>
+        <div class="hidden md:block"><a href="#"><img src="assets/nav-icons/smiley.svg" alt=""/></a></div>
+        <div class="md:hidden"><a href="#"><img src="assets/nav-icons/user-icon.svg" alt=""/></a></div>
+        <div class="md:hidden"><a href="#"><img src="assets/nav-icons/nav-btn.svg" alt="" /></a></div>
       </div>
     </header>
+    <!-- Header section starts here -->
 
-    <section class="hero">
-      <div class="header-container">
-        <div class="product-details">
-          <img src="assets/product1.svg" class="prod-img" alt="Product1" />
 
-          <div class="prod-specs">
-            <h1 class="product-heading">
-              Pumpkin &<br />
-              Sesame Chikkis
-            </h1>
+    <!-- hero section starts here -->
+    <section class="hero md:mt-10 md:px-4">
+        
+        <div class="md:flex">
+          <img src="assets/product-img.svg" alt="" class="my-0 mx-auto md:order-2 md:absolute md:w-[25rem] md:left-[50%] md:top-[12rem]">
+          
+          <div class="md:flex flex-col md:gap-8"> <!-- This div has : heading, ratings and product description(for desktop version) -->
+            <h1 class="capitalize text-center font-playfair text-4xl md:text-8xl md:text-left  md:w-[600px]">pumpkin &<br>sesame chikkis</h1>
 
-            <div class="ratings">
-              <img src="assets/ratings-res.svg" alt="" />
+            <div class="flex justify-center items-center gap-4 md:justify-start ">
+              <img src="assets/ratings-res.svg" alt="ratings"/>
               <p>12 reviews</p>
             </div>
-            <p class="prod-description1">
+            <p class="hidden font-roboto-mono text-[20px] font-[300] md:block w-[40rem] border border-black border-solid">
               Perfect for keeping blood sugar levels steady on a particularly
               stessful day.
             </p>
           </div>
         </div>
 
-        <div class="size">
-          <p class="subtitle-txt1">size</p>
-
-          <!-- wrong mark up: use forms-->
-
-          <div class="size-options d-flex roboto-mono">
-            <div class="option1 option">300g - ₹250</div>
-            <div class="option2 option">300g - ₹250</div>
+        <!-- size-subsection -->
+        <div class="flex flex-col gap-2 my-6 px-4 font-roboto-mono text-sm md:px-0">
+          <p class="uppercase text-subtitle-color">size</p>
+          <div class="flex gap-2">
+            <div class="px-4 py-2 bg-black text-white border border-solid border-black rounded-full">₹300g - ₹250</div>
+            <div class="px-4 py-2 border border-solid border-black rounded-full">₹300g - ₹250</div>
           </div>
+          <!-- <p class="hidden font-roboto text-3xl mt-6 font-bold md:block">₹250</p> -->
         </div>
 
-        <div class="qty">
-          <p class="subtitle-txt1">qty</p>
+        <!-- qty subsection -->
+        <div class="flex flex-col gap-2 my-6 px-4 md:px-0">
+          <p class="uppercase text-subtitle-color text-sm md:hidden">qty</p>
 
-          <div class="qty-params d-flex">
-            <div class="qty-val">
-              <div class="red-qty circle">-</div>
-              <p>1</p>
-              <div class="inc-qty circle">+</div>
+          <div class="flex justify-between items-center">
+            <div class="flex items-center md:hidden gap-3">
+              <img src="assets/minus.svg" alt="minus" class="bg-black p-1 rounded-full">
+              <p class="font-roboto-mono text-xl font-bold">1</p>
+              <img src="assets/add.svg" alt="add" class="bg-black p-1 rounded-full">
             </div>
-
-            <p class="price">₹250</p>
+            <p class="font-roboto text-3xl font-bold">₹250</p>
           </div>
 
-          <button class="add-cart-btn">
-            <img
-              src="assets/shopping-cart-white.svg"
-              alt="Shopping cart btn icon"
-            />
+          <!-- add to cart sub-sub-section -->
+          <button class="my-2 bg-black border-none text-white uppercase flex p-4 items-center justify-center gap-2 rounded-full font-roboto-mono text-sm font-medium md:w-[170px]">
+            <img src="assets/shopping-cart-white.svg" alt="">
             <p>add to cart</p>
           </button>
 
-          <!-- for desk version -->
-          <div class="add-cart-div">
-            <div class="floatingbtn d-flex">
-              <img src="assets/arrow-square-up.svg" alt="arrow-square-up" />
-              <div class="add-prod-cart">
-                <p class="roboto add-prod-name">Pumpkin & Sesame Chikkis</p>
-                <p class="roboto-mono add-prod-cost">₹250(300G)</p>
-              </div>
-              <button class="add-cart">add to cart</button>
+          <!-- delivery subsection -->
+          <div class="flex flex-col items-center gap-2 mb-6 md:hidden">
+            <div class="flex items-center gap-1">
+              <img src="assets/location.svg" alt="location">
+              <p class="uppercase font-medium font-roboto-mono text-xs">deliver to bengaluru - 560103</p>
             </div>
-          </div>
-
-          <div class="delivery">
-            <div class="delivery-address">
-              <img src="assets/location.svg" alt="location" />
-              <p class="delivery-pin">deliver to bengaluru - 560103</p>
-            </div>
-            <p class="del-info">Ships in approx. 3-4 days</p>
+            <p class="font-roboto text-subtext-color2 text-sm">Ships in approx. 3-4 days</p>
           </div>
         </div>
 
-        <div class="hor-separator"></div>
+        <!-- for desk version -->
+        <div class="hidden bg-white py-1 px-1 rounded-xl max-w-[26.5rem] md:fixed md:top-[50rem] md:right-[3.5rem] md:flex items-center justify-center">
+          <div class="flex gap-4 items-center">
+            <img src="assets/arrow-square-up.svg" alt="">
 
-        <p class="prod-description">
+            <div>
+              <p class="font-roboto font-semibold">Pumpkin & Sesame Chikkis</p>
+              <p class="font-roboto-mono">₹250(300G)</p>
+            </div>
+            <button class="uppercase bg-black text-white rounded-full px-4 text-[13px] font-roboto-mono h-[3.3rem]">add to cart</button>
+          </div>
+        </div>
+        
+        <!-- horizontal separator -->
+        <div class="bg-primary-color h-0.5 mx-4 md:hidden">
+        </div>
+        
+        <p class="my-4 mb-12 text-center font-roboto text-2xl font-light md:hidden">
           Perfect for keeping blood sugar levels steady on a particularly
           stessful day.
         </p>
-      </div>
     </section>
-
-    <section class="ingredients">
-      <div class="ing-svg">
-        <img src="assets/fill-63.svg" alt="" />
+    <!-- hero section ends -->
+    
+    <!-- Section with ingredients bar starts here -->
+    <div class="uppercase flex gap-6 pl-2 my-4 h-20 overflow-x-scroll font-roboto-condensed font-bold text-sm items-center md:bg-secondary-color md:mt-20">
+      <div class="flex items-center justify-center shrink-0 gap-2">
+        <img src="assets/ingedients/Glutten-Free.svg" alt="" class="w-8">
+        <p>glutten free</p>
       </div>
-      <div class="ingredients-list">
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/Glutten-Free.svg" alt="" />
-          </div>
-          <div class="ingredient-items">glutter free</div>
-        </div>
 
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/No-added-sugar.svg" alt="" />
-          </div>
-          <div class="ingredient-items">no sugar</div>
-        </div>
-
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/Vegan-Friendly.svg" alt="" />
-          </div>
-          <div class="ingredient-items">vegan friendly</div>
-        </div>
-
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/No-added-colors.svg" alt="" />
-          </div>
-          <div class="ingredient-items">no added colors</div>
-        </div>
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/Glutten-Free.svg" alt="" />
-          </div>
-          <div class="ingredient-items">glutter free</div>
-        </div>
-
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/No-added-sugar.svg" alt="" />
-          </div>
-          <div class="ingredient-items">no sugar</div>
-        </div>
-
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/Vegan-Friendly.svg" alt="" />
-          </div>
-          <div class="ingredient-items">vegan friendly</div>
-        </div>
-
-        <div class="ingredient-group">
-          <div class="ingredient-items">
-            <img src="assets/ingedients/No-added-colors.svg" alt="" />
-          </div>
-          <div class="ingredient-items">no added colors</div>
-        </div>
+      <div class="flex items-center justify-center shrink-0 gap-2">
+        <img src="assets/ingedients/No-added-sugar.svg" alt="" class="w-8">
+        <p>sugar</p>
       </div>
-    </section>
 
-    <section class="know-food">
-      <div class="know-container">
-        <div class="know-title-txt">
-        <img src="assets/know-bg.svg" alt="bg-img" class="know-bg-img">
-        <!-- use the n-th child approach -->
-          <span class="k">k</span>
-          <span class="n">n</span>
-          <span class="o">o</span>
-          <span class="w">w</span>
+      <div class="flex items-center justify-center shrink-0 gap-2">
+        <img src="assets/ingedients/Vegan-Friendly.svg" alt="" class="w-8">
+        <p>vegan friendly</p>
+      </div>
 
-          <span class="y">y</span>
-          <span class="o1">o</span>
-          <span class="u">u</span>
-          <span class="r">r</span>
+      <div class="flex items-center justify-center shrink-0 gap-2">
+        <img src="assets/ingedients/No-added-colors.svg" alt="" class="w-8">
+        <p>no added colors</p>
+      </div>
 
-          <span class="f">f</span>
-          <span class="o2">o</span>
-          <span class="o3">o</span>
-          <span class="d">d</span>
-        </div>
+      <div class="flex items-center justify-center shrink-0 gap-2">
+        <img src="assets/ingedients/Glutten-Free.svg" alt="" class="w-8">
+        <p>glutten free</p>
+      </div>
 
-        <div class="nut-facts">
-          <div class="nutrition">
-            <h3 class="know-food-sub">nutritional facts</h3>
-            <p>(per 100g)</p>
+      <div class="flex items-center justify-center shrink-0 gap-2">
+        <img src="assets/ingedients/No-added-sugar.svg" alt="" class="w-8">
+        <p>sugar</p>
+      </div>
 
-            <!-- use pseudo selectors like before and after -->
-            <div class="macro">
-              <div class="macro-row">
-                <p>Energy</p>
-                <div class="dots"></div>
-                <p>402kcal</p>
+      <div class="flex items-center justify-center shrink-0 gap-2">
+        <img src="assets/ingedients/Vegan-Friendly.svg" alt="" class="w-8">
+        <p>vegan friendly</p>
+      </div>
+
+      <div class="flex items-center justify-center shrink-0 gap-4">
+        <img src="assets/ingedients/No-added-colors.svg" alt="" class="w-8">
+        <p>no added colors</p>
+      </div>
+    </div>
+    <!-- Section ends -->
+
+    <!-- Know-Your-Food Section starts here -->
+    <div>
+      <!-- Know your food text -->
+      <ul class="mt-40 mb-20 mx-auto uppercase font-roboto font-black text-4xl flex justify-center lg:my-40">
+        <li class="rotate-[-40.5deg]">k</li>
+        <li class="rotate-[-33.7deg] translate-y-[-1.1rem] translate-x-[-0.1rem]">n</li>
+        <li class="rotate-[-26.7deg] translate-y-[-1.95rem] translate-x-[-0.25rem]">o</li>
+        <li class="rotate-[-19deg] translate-y-[-2.7rem] translate-x-[-0.3rem]">w</li>
+        <li class="rotate-[-8.6deg] translate-y-[-3.3rem] translate-x-[0rem]">y</li>
+        <li class="rotate-[-1.9deg] translate-y-[-3.4rem] translate-x-[0rem]">o</li>
+        <li class="rotate-[4.8deg] translate-y-[-3.3rem] translate-x-[0.1rem]">u</li>
+        <li class="rotate-[11.4deg] translate-y-[-3.1rem] translate-x-[0.2rem]">r</li>
+        <li class="rotate-[20.6deg] translate-y-[-2.5rem] translate-x-[0.5rem]">f</li>
+        <li class="rotate-[26.9deg] translate-y-[-1.8rem] translate-x-[0.5rem]">o</li>
+        <li class="rotate-[33.8deg] translate-y-[-1rem] translate-x-[0.3rem]">o</li>
+        <li class="rotate-[40.5deg] translate-y-[0.2rem] translate-x-[-0.1rem]">d</li>
+      </ul>
+    
+      
+        <div class="flex flex-col md:flex-row md:justify-between px-4 md:gap-10">
+
+          <!-- nutritional facts sub seciton starts here -->
+          <div class="text-center mt-0 mb-20 flex-auto font-roboto-mono max-w-[400px]">
+            <h2 class="uppercase font-semibold text-[15px]">nutritional facts</h2>
+            <p class="uppercase font-medium text-[13px]">(per 100g)</p>
+            <div class="flex flex-col gap-4 mx-2 font-[300] text-[13px]">
+              <div class="flex justify-between">
+                <p class="capitalize">energy</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>402kcal</p>
               </div>
-              <div class="macro-row">
-                <p>Fat</p>
-                <div class="dots"></div>
-                <p>41.6g</p>
+              <div class="flex">
+                <p class="capitalize">fat</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>1.6g</p>
               </div>
-              <div class="macro-row">
-                <p>of which Saturates</p>
-                <div class="dots"></div>
-                <p>7.4g</p>
+              <div class="flex">
+                <p class="flex-none">of which saturates</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>1.6g</p>
               </div>
-              <div class="macro-row">
-                <p>Carbohydrates</p>
-                <div class="dots"></div>
-                <p>7.4g</p>
+              <div class="flex">
+                <p class="capitalize">carbohydrates</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>9.0g</p>
               </div>
-              <div class="macro-row">
-                <p>of which Sugars</p>
-                <div class="dots"></div>
-                <p>9.0g</p>
+              <div class="flex">
+                <p class="flex-none">of which sugars</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>1.6g</p>
               </div>
-              <div class="macro-row">
-                <p>Fibre</p>
-                <div class="dots"></div>
-                <p>1.6g</p>
+              <div class="flex">
+                <p class="capitalize">fibre</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>7.4g</p>
               </div>
-              <div class="macro-row">
-                <p>Protein</p>
-                <div class="dots"></div>
-                <p>7.4g</p>
+              <div class="flex">
+                <p class="capitalize">protein</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>0.09g</p>
               </div>
-              <div class="macro-row">
-                <p>Salt</p>
-                <div class="dots"></div>
-                <p>0.09g</p>
+              <div class="flex">
+                <p class="capitalize">salt</p><div class="border-b-[3px] border-dotted border-dots-color w-full h-[1rem] mx-1"></div><p>0.09g</p>
               </div>
             </div>
           </div>
 
-          <div class="whats-inside">
-            <h3 class="know-food-sub">what's inside</h3>
-
-            <div class="seeds">
-              <div class="sesame">
-                <img src="assets/know-food/sesame.svg" alt="Sesame Seeds" />
-                Sesame seeds
+          <!-- what's inside sub section -->
+          <div class="roboto-mono flex w-[350px]  flex-col my-8 gap-2 items-center text-center md:m-0">
+            <h2 class="uppercase text-[15px] font-semibold">what's inside</h2>
+            <div class="flex flex-wrap justify-center items-center gap-4 max-w-[400px] font-light">
+              <div class="flex flex-col justify-center ">
+                <img src="assets/whats-inside/sesame.svg" alt="sesame">
+                <p>sesame seeds</p>
               </div>
-              <div class="sesame">
-                <img src="assets/know-food/sesame.svg" alt="Sesame Seeds" />
-                Sesame seeds
+              <div class="flex flex-col justify-center ">
+                <img src="assets/whats-inside/sesame.svg" alt="sesame">
+                <p>sesame seeds</p>
               </div>
-              <div class="sesame">
-                <img src="assets/know-food/sesame.svg" alt="Sesame Seeds" />
-                Sesame seeds
+              <div class="flex flex-col justify-center ">
+                <img src="assets/whats-inside/sesame.svg" alt="sesame">
+                <p>sesame seeds</p>
               </div>
-              <div class="sesame">
-                <img src="assets/know-food/sesame.svg" alt="Sesame Seeds" />
-                Sesame seeds
+              <div class="flex flex-col justify-center ">
+                <img src="assets/whats-inside/sesame.svg" alt="sesame">
+                <p>sesame seeds</p>
               </div>
-              <div class="sesame">
-                <img src="assets/know-food/sesame.svg" alt="Sesame Seeds" />
-                Sesame seeds
+              <div class="flex flex-col justify-center ">
+                <img src="assets/whats-inside/sesame.svg" alt="sesame">
+                <p>sesame seeds</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </body>
+
+    </div>
+    <!-- Section ends here -->
+
+</body>
+
 </html>
